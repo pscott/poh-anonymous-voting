@@ -36,10 +36,10 @@ function ToggleGroup() {
   const [active, setActive]= useState(types[0]);
   return <div>
     <ButtonOui>
-      OUI
+      YES
     </ButtonOui>
     <ButtonNon>
-      NON
+      NO
     </ButtonNon>
   </div>
 }
@@ -48,6 +48,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        SHOULD CARLOS MATOS PRESIDE THE ETHEREUM FONDATION ?
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
           {/* Edit <code>src/App.js</code> and save to reload. */}
