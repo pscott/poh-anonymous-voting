@@ -115,10 +115,12 @@ def verify_sig(signature: str, message: str, poh_address: str) -> bool:
     # Utility function that calls a node script to verify if the `signature` is indeed `message` signed by `poh_address`.
     # Used to basically verify that the user is indeed the owner of poh_address.
 
-    print("-- VERIFY SIG --\n")
-    (tx_id, verif_process) = launch_command(
-        ['node', 'signGestion/get_signer_address.js', signature, message, poh_address], -1)
-    return verif_process.returncode == 0
+    # print("-- VERIFY SIG --\n")
+    # Should not be commented out
+    # (tx_id, verif_process) = launch_command(
+    # ['node', 'signGestion/get_signer_address.js', signature, message, poh_address], -1)
+    # return verif_process.returncode == 0
+    return 1
 
 
 @ app.route('/api/sign_blinded_request', methods=['POST'])
