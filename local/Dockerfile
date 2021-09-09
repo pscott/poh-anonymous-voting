@@ -5,9 +5,9 @@ RUN apt-get upgrade -y
 RUN pip3 install contextvars flask flask_cors 
 
 WORKDIR /local
-ADD cairo-lang-0.3.0.zip /local
+ADD cairo-lang-0.4.0.zip /local
 
-RUN pip3 install cairo-lang-0.3.0.zip
+RUN pip3 install cairo-lang-0.4.0.zip
 
 EXPOSE 4242
 
