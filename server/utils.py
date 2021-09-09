@@ -27,8 +27,11 @@ def wait_until_included(tx_id):
         for i in range(60):
             subproc = subprocess.run(
                 ['starknet', 'tx_status', '--network', 'alpha', '--id', str(tx_id)], stdout=subprocess.PIPE)
-            json_res = json.loads(subproc.stdout)
-            print(json.dumps(json_res, indent=4, sort_keys=True))
+            try:
+                json_res = json.loads(subproc.stdout)
+                print(json.dumps(json_res, indent=4, sort_keys=True))
+            except:
+                pass
             if "tx_failure_reason" in json_res or json_res['tx_status'] == 'REJECTED':
                 print("\n---TX FAILED---\n")
                 return False
